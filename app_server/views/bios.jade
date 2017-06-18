@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+   each item in bios
+     h2.biosName &nbsp; #{item.name} &nbsp;
+     img(src=item.profilePic)
+     .row
+           .main
+             .well.well-sm.main-header
+               .col-cs-12
+                 p Age:
+                   small.biosAge &nbsp; #{item.age} &nbsp;
+                 p Favorite Food:
+                   small.biosFavoriteFood &nbsp; #{item.favoriteFood} &nbsp; 
+                 p Bio:
+                   small.biosInfo &nbsp; #{item.bio} &nbsp;
+                             

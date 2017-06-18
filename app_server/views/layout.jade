@@ -1,0 +1,39 @@
+doctype html
+html
+   head
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      title= title
+      link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+   body
+   .navbar.navbar-default.navbar-fixed-top
+   .container
+      .navbar-header
+         a.navbar-brand(href='/') SonicRPG
+         button.navbar.toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+      #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+             li
+                 a(href='/media/') Media
+             li
+                 a(href='/bios/') Bios
+             li
+                 a(href='/download/') Download Page
+             li
+                 a(href='/comments/') Discord
+             li
+                 a(href='/about/') About Us
+
+    .container
+   block content
+   footer
+      .row
+         .col-xs-12
+           small Website &copy; Ray the Gaming Squirrel 2017
+           br
+           small All intellectual property &copy; of their respective owners. 
+      script(src='/javascripts/jquery-3.2.1.min.js') //whatever version of jquery you are using here
+      script(src='/bootstrap/js/bootstrap.min.js')

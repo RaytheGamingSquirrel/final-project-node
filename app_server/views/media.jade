@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+   each item in media
+     h2.mediaTitle &nbsp; #{item.title} &nbsp;
+     .row
+         .media
+           .well.well-sm.main-header
+             .col-cs-12
+                 img(src=item.media)

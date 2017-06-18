@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  mixin formatDate(dateString)
+    -var date = new Date(dateString);
+    -var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    -var d = date.getDate();
+    -var m = monthNames[date.getMonth()];
+    -var y = date.getFullYear();
+    -var output = d + ' ' + m + ' ' + y;
+    =output
+   each item in main
+   h2.mainTitle &nbsp; #{item.title} &nbsp;
+   .row
+       .main
+         .well.well-sm.main-header
+           .col-cs-12
+             p.mainContent &nbsp; #{item.content} &nbsp;
+             p Posted on
+               small.mainPostedOn 
+                 +formatDate(item.postedOn)
